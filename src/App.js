@@ -77,11 +77,14 @@ class App extends Component {
             </div>
           </div>
 
-          <div className="col-md-9">
+          <div className="col-md-12">
             <div className="row">
               { tareas }
             </div>
           </div>
+
+          <div className="card-footer"></div>
+
         </div>
         
       

@@ -36,6 +36,7 @@ class TasksForm extends Component {
         return (
           <div className="card">
             <form onSubmit={this.handleSubmit} className="card-body">
+                <h4>Agregue una tarea</h4>
               <div className="form-group">
                 <input
                   type="text"
@@ -73,9 +74,9 @@ class TasksForm extends Component {
                     value={this.state.priority}
                     onChange={this.handleInputChange}
                   >
-                  <option>baja</option>
-                  <option>media</option>
-                  <option>alta</option>
+                  <option>Prioridad Baja</option>
+                  <option>Prioridad Media</option>
+                  <option>Prioridad Alta</option>
                 </select>
               </div>
               <button type="submit" className="btn btn-primary">
