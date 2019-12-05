@@ -21,6 +21,17 @@ class App extends Component {
     })
   }
 
+  removeTask(index_task) {
+    if (window.confirm('¿Esta seguro de querer eliminar esta tarea?')){
+      this.setState({
+        tasks: this.state.tasks.filter((e, i) => {
+          return i != index_task
+        })
+      })
+    }
+    
+  }
+
   render() {
     const tareas = this.state.tasks.map((task, i) => {
       return (
@@ -35,6 +46,11 @@ class App extends Component {
             <div className="card-body">
               <p>{task.description}</p>
               <p><mark>{task.responsible}</mark></p>
+            </div>
+            <div className="card-footer">
+              <button className="btn btn-danger" onClick={this.removeTask.bind(this, i)}>
+                Eliminar
+              </button>
             </div>
           </div>
         </div>
